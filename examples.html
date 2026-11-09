@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างการประยุกต์ - AI & Web Development</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font Prompt -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { 
+            font-family: 'Prompt', sans-serif; 
+            background-color: #0b0f19; 
+            color: #e2e8f0; 
+        }
+
+        /* Base Card Styling (สถานะปกติ - สีน้ำเงินดำ) */
+        .ai-card {
+            background: rgba(15, 23, 42, 0.75);
+            border: 1.5px solid rgba(59, 130, 246, 0.3);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Hover State: เอาเมาส์จ่อ -> การ์ดยกขึ้น + เปลี่ยนเป็นสีเขียวอ่อนเรืองแสง */
+        .ai-card:hover {
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, rgba(6, 78, 59, 0.85), rgba(16, 185, 129, 0.35));
+            border-color: rgba(52, 211, 153, 0.8);
+            box-shadow: 0 16px 35px -10px rgba(16, 185, 129, 0.4);
+        }
+
+        /* ปรับแต่งข้อความ Badge เมื่อเมาส์จ่อ */
+        .ai-card:hover .card-badge {
+            color: #a7f3d0;
+        }
+
+        .ai-card:hover .card-icon {
+            background-color: rgba(52, 211, 153, 0.25);
+            color: #6ee7b7;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation Bar -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                    <i class="fa-solid fa-robot text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        AI & Web Development
+                    </h1>
+                    <p class="text-sm text-slate-400">การประยุกต์ใช้ AI ในการพัฒนาเว็บ</p>
+                </div>
+            </div>
+
+            <!-- เมนูลิงก์เชื่อมโยงหน้า -->
+            <nav class="flex space-x-2 bg-slate-950 p-1.5 rounded-xl border border-slate-800">
+                <a href="index.html" class="px-5 py-2.5 rounded-lg text-base font-medium transition-all text-slate-400 hover:text-slate-200">
+                    <i class="fa-solid fa-house mr-2"></i> บทนำ & ภาพรวม
+                </a>
+                <a href="tools.html" class="px-5 py-2.5 rounded-lg text-base font-medium transition-all text-slate-400 hover:text-slate-200">
+                    <i class="fa-solid fa-screwdriver-wrench mr-2"></i> เครื่องมือ AI
+                </a>
+                <a href="examples.html" class="px-5 py-2.5 rounded-lg text-base font-semibold transition-all text-blue-400 bg-blue-900/40 border-b-2 border-blue-500">
+                    <i class="fa-solid fa-code mr-2"></i> ตัวอย่างการประยุกต์
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- เนื้อหาหน้าตัวอย่างการประยุกต์ -->
+    <main class="max-w-6xl mx-auto px-4 py-10 flex-grow w-full space-y-12">
+        
+        <!-- Hero Header -->
+        <div class="text-center space-y-4 py-4">
+            <span class="px-4 py-1.5 text-sm font-semibold rounded-full bg-purple-900/60 text-purple-300 border border-purple-600/50">
+                บทเรียนที่ 3: เวิร์กโฟลว์การใช้งานจริง
+            </span>
+            <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+                ตัวอย่างการประยุกต์ใช้ <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">AI กับงานเว็บ</span>
+            </h2>
+            <p class="text-slate-300 max-w-4xl mx-auto text-base md:text-lg leading-relaxed">
+                เรียนรู้ขั้นตอนปฏิบัติจริง ตั้งแต่การเขียน Prompt Engineering เพื่อสร้างโครงสร้างหน้าเว็บ ไปจนถึงการเขียนโค้ดเชื่อมต่อ AI API เข้าสู่เว็บไซต์
+            </p>
+        </div>
+
+        <!-- ตัวอย่างที่ 1: Prompt Engineering สำหรับสร้างเว็บ -->
+        <div class="ai-card p-8 rounded-2xl cursor-pointer">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="card-icon w-14 h-14 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-2xl transition-colors">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white">1. เทคนิค Prompt Engineering สั่ง AI เจนหน้าเว็บ</h3>
+                    <p class="text-sm text-purple-300 font-medium">การเขียนคำสั่ง (Prompt) ที่ดี เพื่อให้ได้โค้ด HTML/CSS ตรงตามต้องการ</p>
+                </div>
+            </div>
+
+            <p class="text-sm md:text-base text-slate-300 leading-relaxed mb-6">
+                การสั่งงาน AI ให้เขียนโค้ดหน้าเว็บ ควรระบุ **โครงสร้าง (Role)**, **ธีมสี (Style)**, **ส่วนประกอบ (Components)** และ **ความสามารถที่ต้องการ (Features)** ให้ชัดเจน
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- กล่อง Prompt -->
+                <div class="bg-slate-950 p-5 rounded-xl border border-slate-800">
+                    <h4 class="text-base font-bold text-cyan-400 mb-2 flex items-center">
+                        <i class="fa-solid fa-terminal mr-2"></i> ตัวอย่าง Prompt สั่งงาน AI:
+                    </h4>
+                    <p class="text-xs md:text-sm font-mono text-slate-300 leading-relaxed bg-slate-900 p-4 rounded-lg border border-slate-800">
+                        "ช่วยเขียนโค้ด HTML + Tailwind CSS สำหรับหน้าเว็บสื่อการสอนโทนสีน้ำเงินดำ มี Navbar ด้านบน, การ์ดแสดงข้อมูล 3 ใบที่เปลี่ยนสีได้เมื่อเอาเมาส์จ่อ และฟอนต์ภาษาไทย Prompt อ่านง่าย สภาพแวดล้อมเป็นไฟล์เดียวจบ"
+                    </p>
+                </div>
+
+                <!-- กล่องผลลัพธ์ -->
+                <div class="bg-slate-950 p-5 rounded-xl border border-slate-800">
+                    <h4 class="text-base font-bold text-emerald-400 mb-2 flex items-center">
+                        <i class="fa-solid fa-circle-check mr-2"></i> ผลลัพธ์ที่ได้จาก AI:
+                    </h4>
+                    <ul class="text-xs md:text-sm text-slate-300 space-y-2 list-disc pl-5 leading-relaxed">
+                        <li>ได้ไฟล์ HTML ที่ดึง CDN ของ Tailwind CSS และ Google Font Prompt มาใช้ทันที</li>
+                        <li>จัดเลย์เอาต์ Responsive รองรับการแสดงผลทั้งบนมือถือและคอมพิวเตอร์</li>
+                        <li>สร้าง CSS Animation สำหรับเปลี่ยนสีการ์ดและยกตัวขึ้นอัตโนมัติ</li>
+                    </ul>
+                </div>
+            </div>
+            <span class="card-badge text-xs text-purple-400 font-medium mt-6 block">✨ เลื่อนเมาส์จ่อเพื่อดูไฮไลต์สีเขียว</span>
+        </div>
+
+        <!-- ตัวอย่างที่ 2: โค้ด JavaScript เชื่อมต่อ OpenAI API -->
+        <div class="ai-card p-8 rounded-2xl cursor-pointer">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="card-icon w-14 h-14 rounded-2xl bg-yellow-500/20 text-yellow-400 flex items-center justify-center text-2xl transition-colors">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white">2. ตัวอย่างการเขียนโค้ดเชื่อมต่อ AI API (JavaScript)</h3>
+                    <p class="text-sm text-yellow-300 font-medium">การดึงคำตอบจาก AI มาแสดงผลบนหน้าเว็บไซต์ด้วย `fetch()` API</p>
+                </div>
+            </div>
+
+            <p class="text-sm md:text-base text-slate-300 leading-relaxed mb-4">
+                นักพัฒนาสามารถส่งคำถามของผู้ใช้ผ่านฟังก์ชั่น JavaScript ไปยังเซิร์ฟเวอร์ของ AI และนำข้อความตอบกลับมาแสดงบนหน้าเว็บได้ทันที ดังตัวอย่างโค้ดด้านล่างนี้:
+            </p>
+
+            <!-- แสดงโค้ด -->
+            <pre class="bg-slate-950 p-5 rounded-xl text-xs md:text-sm text-blue-300 font-mono overflow-x-auto border border-slate-800 leading-relaxed">
+<span class="text-purple-400">async function</span> <span class="text-blue-400">getAIResponse</span>(userQuestion) {
+    <span class="text-slate-500">// 1. ส่งคำขอไปยัง OpenAI API Endpoint</span>
+    <span class="text-purple-400">const</span> response = <span class="text-purple-400">await</span> fetch(<span class="text-emerald-300">'https://api.openai.com/v1/chat/completions'</span>, {
+        method: <span class="text-emerald-300">'POST'</span>,
+        headers: {
+            <span class="text-emerald-300">'Content-Type'</span>: <span class="text-emerald-300">'application/json'</span>,
+            <span class="text-emerald-300">'Authorization'</span>: <span class="text-emerald-300">'Bearer YOUR_API_KEY_HERE'</span>
+        },
+        body: JSON.stringify({
+            model: <span class="text-emerald-300">'gpt-4o-mini'</span>,
+            messages: [{ role: <span class="text-emerald-300">'user'</span>, content: userQuestion }]
+        })
+    });
+
+    <span class="text-slate-500">// 2. แปลงผลลัพธ์เป็น JSON และนำข้อความไปแสดงบนเว็บ</span>
+    <span class="text-purple-400">const</span> data = <span class="text-purple-400">await</span> response.json();
+    <span class="text-purple-400">const</span> aiMessage = data.choices[<span class="text-orange-400">0</span>].message.content;
+    document.getElementById(<span class="text-emerald-300">'chat-output'</span>).innerText = aiMessage;
+}</pre>
+            <span class="card-badge text-xs text-yellow-400 font-medium mt-6 block">✨ เลื่อนเมาส์จ่อเพื่อดูไฮไลต์สีเขียว</span>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 text-center py-6 text-sm text-slate-400">
+        สื่อการเรียนการสอน AI & Web Development | พัฒนาด้วย HTML, CSS & JS
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ยินดีต้อนรับ - AI & Web Development</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font Prompt -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #071124; /* พื้นหลังน้ำเงินเข้มลึก */
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        /* เอฟเฟกต์แสงเรืองโทนฟ้าอ่อนเกือบเข้ม */
+        .bg-glow-skyblue {
+            background: radial-gradient(circle at 75% 30%, rgba(2, 132, 199, 0.25), rgba(7, 17, 36, 0.95) 70%);
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+        }
+
+        .float-animation {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-glow-skyblue flex flex-col justify-between relative">
+
+    <!-- Navbar ด้านบน -->
+    <header class="max-w-7xl mx-auto w-full px-6 py-6 flex justify-between items-center z-20">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center text-white shadow-lg shadow-sky-500/40">
+                <i class="fa-solid fa-robot text-xl"></i>
+            </div>
+            <span class="text-xl font-bold tracking-wide text-white">AI <span class="text-sky-400">WebDev</span></span>
+        </div>
+        <div class="text-xs text-sky-200 bg-sky-950/80 px-4 py-2 rounded-full border border-sky-800/60 shadow-sm">
+            สื่อการสอนบทเรียนออนไลน์ 🎓
+        </div>
+    </header>
+
+    <!-- Content ส่วน Banner หลัก -->
+    <main class="max-w-7xl mx-auto w-full px-6 py-12 flex-grow flex items-center z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+            
+            <!-- ด้านซ้าย: ข้อความต้อนรับ & ปุ่มเข้าสู่บทเรียน -->
+            <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 bg-sky-950 border border-sky-600/80 text-sky-300 px-4 py-1.5 rounded-full text-sm font-medium shadow-md">
+                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                    <span>สื่อการเรียนการสอนยุคใหม่</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    AI Coding <br />
+                    <span class="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+                        Assistant Tools
+                    </span> 
+                    <span class="text-yellow-400 font-extrabold">+</span>
+                </h1>
+
+                <p class="text-sky-100 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                    เรียนรู้การประยุกต์ใช้ปัญญาประดิษฐ์ในการพัฒนาเว็บไซต์ ยกระดับการเขียนโค้ดและดีไซน์ UI/UX ให้รวดเร็ว มีประสิทธิภาพด้วยเครื่องมือ AI ระดับสากล
+                </p>
+
+                <!-- ปุ่มกดเข้าสู่หน้าแรก (index.html) ในโทนสีฟ้าอ่อนเกือบเข้ม -->
+                <div class="pt-4 flex justify-center lg:justify-start">
+                    <a href="index.html" class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-sky-600 hover:bg-sky-500 rounded-2xl shadow-xl shadow-sky-600/30 hover:shadow-sky-500/50 hover:scale-105 transition-all duration-300 text-lg border border-sky-400/40">
+                        <span class="flex items-center gap-3">
+                            เข้าสู่เนื้อหาหน้าแรก
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1.5 transition-transform text-sky-200"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ด้านขวา: ภาพประกอบ 3D Isometric สไตล์น่ารัก -->
+            <div class="lg:col-span-6 relative flex justify-center items-center">
+                
+                <!-- การ์ดจำลององค์ประกอบ 3D -->
+                <div class="relative w-full max-w-md p-6 float-animation">
+                    
+                    <!-- หน้าต่างโค้ดจำลอง (Code Window) -->
+                    <div class="bg-slate-900 rounded-2xl border border-sky-500/40 p-5 shadow-2xl shadow-sky-950/80 mb-6 transform -rotate-2">
+                        <div class="flex items-center space-x-2 mb-4 border-b border-slate-800 pb-3">
+                            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                            <span class="text-xs text-sky-300 font-mono ml-2">ai_developer.js</span>
+                        </div>
+                        <div class="space-y-2 font-mono text-xs sm:text-sm">
+                            <div class="text-sky-400"><span class="text-purple-400">const</span> aiAssistant = <span class="text-yellow-300">new</span> AI();</div>
+                            <div class="text-slate-400 pl-4">// เจนโค้ดและออกแบบเว็บอัตโนมัติ</div>
+                            <div class="text-cyan-300 pl-4">aiAssistant.<span class="text-emerald-400">buildWebsite</span>({</div>
+                            <div class="text-sky-200 pl-8">style: <span class="text-amber-300">'Modern Isometric'</span>,</div>
+                            <div class="text-sky-200 pl-8">speed: <span class="text-amber-300">'10x Faster'</span></div>
+                            <div class="text-cyan-300 pl-4">});</div>
+                        </div>
+                    </div>
+
+                    <!-- หุ่นยนต์มาสคอต 3D -->
+                    <div class="absolute -bottom-4 -right-2 sm:right-4 bg-slate-900 p-5 rounded-3xl shadow-xl border border-sky-400/50 flex items-center space-x-4 transform rotate-3">
+                        <div class="w-14 h-14 rounded-2xl bg-sky-600 flex items-center justify-center text-white text-3xl shadow-lg shadow-sky-500/30">
+                            <i class="fa-solid fa-robot animate-bounce"></i>
+                        </div>
+                        <div>
+                            <div class="text-white font-bold text-base">AI Robot Helper</div>
+                            <div class="text-xs text-sky-300 font-medium">พร้อมช่วยเขียนเว็บแล้ว! ⚡</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto w-full px-6 py-6 text-center text-xs text-sky-300 z-20 border-t border-sky-900/60">
+        www.yourbrand.com &bull; สื่อการสอนการประยุกต์ใช้ AI กับการพัฒนาเว็บ
+    </footer>
+
+</body>
+</html>

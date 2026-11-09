@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เครื่องมือ AI - AI & Web Development</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font Prompt -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { 
+            font-family: 'Prompt', sans-serif; 
+            background-color: #0b0f19; 
+            color: #e2e8f0; 
+        }
+
+        /* Base Card Styling (สถานะปกติ - สีน้ำเงินดำ) */
+        .ai-card {
+            background: rgba(15, 23, 42, 0.75);
+            border: 1.5px solid rgba(59, 130, 246, 0.3);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Hover State: เอาเมาส์จ่อ -> การ์ดยกขึ้น + เปลี่ยนเป็นสีเขียวอ่อนเรืองแสง */
+        .ai-card:hover {
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, rgba(6, 78, 59, 0.85), rgba(16, 185, 129, 0.35));
+            border-color: rgba(52, 211, 153, 0.8);
+            box-shadow: 0 16px 35px -10px rgba(16, 185, 129, 0.4);
+        }
+
+        /* ปรับแต่งข้อความ Badge เมื่อเมาส์จ่อ */
+        .ai-card:hover .card-badge {
+            color: #a7f3d0;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation Bar -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                    <i class="fa-solid fa-robot text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        AI & Web Development
+                    </h1>
+                    <p class="text-sm text-slate-400">การประยุกต์ใช้ AI ในการพัฒนาเว็บ</p>
+                </div>
+            </div>
+
+            <!-- เมนูลิงก์เชื่อมโยงหน้า -->
+            <nav class="flex space-x-2 bg-slate-950 p-1.5 rounded-xl border border-slate-800">
+                <a href="index.html" class="px-5 py-2.5 rounded-lg text-base font-medium transition-all text-slate-400 hover:text-slate-200">
+                    <i class="fa-solid fa-house mr-2"></i> บทนำ & ภาพรวม
+                </a>
+                <a href="tools.html" class="px-5 py-2.5 rounded-lg text-base font-semibold transition-all text-blue-400 bg-blue-900/40 border-b-2 border-blue-500">
+                    <i class="fa-solid fa-screwdriver-wrench mr-2"></i> เครื่องมือ AI
+                </a>
+                <a href="examples.html" class="px-5 py-2.5 rounded-lg text-base font-medium transition-all text-slate-400 hover:text-slate-200">
+                    <i class="fa-solid fa-code mr-2"></i> ตัวอย่างการประยุกต์
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- เนื้อหาหน้าเครื่องมือ AI -->
+    <main class="max-w-6xl mx-auto px-4 py-10 flex-grow w-full space-y-12">
+        
+        <!-- Hero Header -->
+        <div class="text-center space-y-4 py-4">
+            <span class="px-4 py-1.5 text-sm font-semibold rounded-full bg-cyan-900/60 text-cyan-300 border border-cyan-600/50">
+                บทเรียนที่ 2: เครื่องมือ AI ยอดนิยม
+            </span>
+            <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+                รวมเครื่องมือ <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">AI Assistant</span> <br class="hidden md:block" />
+                ที่นักพัฒนาเว็บต้องรู้จัก
+            </h2>
+            <p class="text-slate-300 max-w-4xl mx-auto text-base md:text-lg leading-relaxed">
+                เจาะลึกเครื่องมือปัญญาประดิษฐ์ระดับสากล ช่วยตั้งแต่ขั้นตอนการเขียนโค้ด ปรับแต่ง Logic ออกแบบหน้าตาเว็บไซต์ (UI/UX) ไปจนถึงการทดสอบความปลอดภัย
+            </p>
+        </div>
+
+        <!-- หมวดที่ 1: AI สำหรับช่วยเขียนโค้ด (Coding Assistants - จัดเต็ม 4 เครื่องมือหลัก) -->
+        <div>
+            <h3 class="text-2xl font-bold text-white mb-6 border-l-4 border-cyan-400 pl-4">
+                1. หมวดหมู่ AI ช่วยเขียนโค้ดและพัฒนา (AI Coding Assistants)
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- การ์ดที่ 1: GitHub Copilot -->
+                <div class="ai-card p-8 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-4 mb-5">
+                            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSAO5SgCocwlgsWEky_eCO2bTHGFfmh8Yq1-qTgZdlKzwm6xjRiRK9qY_PY7VTrD3cYKpVoqSAz3URWcpI" alt="GitHub Copilot Logo" class="w-14 h-14 rounded-2xl object-cover border border-slate-700 shadow-md">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">GitHub Copilot</h4>
+                                <p class="text-sm text-cyan-400 font-medium">Real-time AI Pair Programmer</p>
+                            </div>
+                        </div>
+                        <p class="text-sm md:text-base text-slate-300 leading-relaxed mb-4">
+                            ผู้ช่วยเขียนโค้ดระดับมาตรฐานอุตสาหกรรมพัฒนาโดย GitHub และ OpenAI ทำงานร่วมกับ VS Code ช่วยเดาและเติมโค้ดอัตโนมัติ (Inline Autocomplete) จากบริบทโค้ดในไฟล์และคำอธิบาย Comment
+                        </p>
+                        <ul class="text-sm text-slate-300 space-y-2 list-disc pl-5">
+                            <li>คาดเดาและเขียนโค้ดบรรทัดถัดไปแบบอัตโนมัติได้แม่นยำ</li>
+                            <li>ใช้ Copilot Chat สั่งแก้ไขโค้ด อธิบายฟังก์ชัน หรือสร้าง Unit Test</li>
+                            <li>รองรับภาษาเว็บหลักครบถ้วน (HTML, CSS, JavaScript, TypeScript, PHP)</li>
+                        </ul>
+                    </div>
+                    <span class="card-badge text-xs text-blue-400 font-medium mt-6 block"></span>
+                </div>
+
+                <!-- การ์ดที่ 2: Cursor AI -->
+                <div class="ai-card p-8 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-4 mb-5">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-bold text-xl border border-slate-700 shadow-md">
+                                <i class="fa-solid fa-code text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Cursor AI Editor</h4>
+                                <p class="text-sm text-blue-400 font-medium">AI-First Code Editor</p>
+                            </div>
+                        </div>
+                        <p class="text-sm md:text-base text-slate-300 leading-relaxed mb-4">
+                            โปรแกรมแก้ไขโค้ด (Code Editor) ยุคใหม่ที่พัฒนาต่อยอดจาก VS Code โดยมี AI ฝังลึกในระดับระบบ สามารถอ่านและเข้าใจโค้ดทั้งโปรเจกต์ (Codebase Context) ได้อย่างสมบูรณ์แบบ
+                        </p>
+                        <ul class="text-sm text-slate-300 space-y-2 list-disc pl-5">
+                            <li>ใช้ปุ่ม `Ctrl + K` สั่งให้ AI แก้ไขหรือสร้างโค้ด ณ ตำแหน่งที่ต้องการได้ทันที</li>
+                            <li>สแกนไฟล์ทั้งหมดในโปรเจกต์เพื่อแก้ Bug ข้ามหลายๆ ไฟล์พร้อมกัน</li>
+                            <li>รองรับการสลับใช้โมเดลระดับท็อปอย่าง GPT-4o และ Claude 3.5 Sonnet</li>
+                        </ul>
+                    </div>
+                    <span class="card-badge text-xs text-blue-400 font-medium mt-6 block"></span>
+                </div>
+
+                <!-- การ์ดที่ 3: Claude 3.5 Sonnet & ChatGPT -->
+                <div class="ai-card p-8 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-4 mb-5">
+                            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcR_o6bekcBpj7xs83axGJYVQfZconpmCsZH4CCsjPCCqAFz1x1EEpL3ybbqfCL3KUMJNffLlCH6J5VvBlE" alt="ChatGPT Logo" class="w-14 h-14 rounded-2xl object-cover border border-slate-700 shadow-md">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Claude 3.5 Sonnet & ChatGPT</h4>
+                                <p class="text-sm text-purple-400 font-medium">Advanced Logic & Architectural AI</p>
+                            </div>
+                        </div>
+                        <p class="text-sm md:text-base text-slate-300 leading-relaxed mb-4">
+                            โมเดลปัญญาประดิษฐ์ขนาดใหญ่ (LLM) ที่มีความเชี่ยวชาญด้านการคิดวิเคราะห์ อัลกอริทึมซับซ้อน ออกแบบสถาปัตยกรรมฐานข้อมูล และการวางระบบความปลอดภัยของเว็บไซต์
+                        </p>
+                        <ul class="text-sm text-slate-300 space-y-2 list-disc pl-5">
+                            <li>เขียนโค้ดฟังก์ชันยาวๆ หรือ Logic ที่ซับซ้อนได้อย่างถูกต้องตามหลักวิศวกรรม</li>
+                            <li>ช่วยวางโครงสร้างฐานข้อมูล (Database Schema) และสร้าง SQL Queries</li>
+                            <li>มีฟีเจอร์ Artifacts (ของ Claude) แสดงพรีวิวผลลัพธ์หน้าเว็บแบบเรียลไทม์</li>
+                        </ul>
+                    </div>
+                    <span class="card-badge text-xs text-purple-400 font-medium mt-6 block"></span>
+                </div>
+
+                <!-- การ์ดที่ 4: Tabnine & Amazon Q Developer -->
+                <div class="ai-card p-8 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-4 mb-5">
+                            <div class="w-14 h-14 rounded-2xl bg-slate-900 text-orange-400 flex items-center justify-center font-bold text-2xl border border-slate-700 shadow-md">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Tabnine & Amazon Q</h4>
+                                <p class="text-sm text-amber-400 font-medium">Private & Enterprise Coding AI</p>
+                            </div>
+                        </div>
+                        <p class="text-sm md:text-base text-slate-300 leading-relaxed mb-4">
+                            เครื่องมือ AI เขียนโค้ดที่เน้นความปลอดภัยของข้อมูลและมาตรฐานระดับองค์กร เหมาะสำหรับนักพัฒนาที่ต้องการความมั่นใจว่าซอร์สโค้ดของโปรเจกต์จะไม่ถูกนำไปเทรนต่อ
+                        </p>
+                        <ul class="text-sm text-slate-300 space-y-2 list-disc pl-5">
+                            <li>เรียนรู้รูปแบบการเขียนโค้ด (Coding Style) ของทีมและแนะนำตามมาตรฐานเดิม</li>
+                            <li>มีระบบตรวจเช็คช่องโหว่ความปลอดภัยของโค้ด (Vulnerability Scanning)</li>
+                            <li>สามารถรันระบบแบบ Local หรือรักษาความเป็นส่วนตัวของข้อมูล 100%</li>
+                        </ul>
+                    </div>
+                    <span class="card-badge text-xs text-amber-400 font-medium mt-6 block"></span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- หมวดที่ 2: AI สำหรับออกแบบ UI/UX และ Frontend -->
+        <div>
+            <h3 class="text-2xl font-bold text-white mb-6 border-l-4 border-emerald-400 pl-4">
+                2. หมวดหมู่ AI ออกแบบหน้าตาเว็บและส่วนประกอบ (UI/UX Generators)
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- การ์ด v0.dev -->
+                <div class="ai-card p-8 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-4 mb-5">
+                            <div class="w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl border border-slate-700 shadow-md">
+                                v0
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">v0.dev (by Vercel)</h4>
+                                <p class="text-sm text-emerald-400 font-medium">Generative UI Interface</p>
+                            </div>
+                        </div>
+                        <p class="text-sm md:text-base text-slate-300 leading-relaxed mb-4">
+                            เครื่องมือสุดล้ำที่เปลี่ยนข้อความอธิบาย (Text Prompt) ให้กลายเป็นหน้าตาเว็บไซต์หรือส่วนประกอบ UI (React / Tailwind CSS) สวยงามพร้อมใช้งานจริงในไม่กี่วินาที
+                        </p>
+                        <ul class="text-sm text-slate-300 space-y-2 list-disc pl-5">
+                            <li>สร้างหน้าเว็บจากตัวหนังสือหรืออัปโหลดรูปภาพต้นแบบ</li>
+                            <li>รองรับการปรับแต่งดีไซน์ด้วยการพูดคุยกับ AI ต่อเนื่อง</li>
+                            <li>คัดลอกโค้ด Tailwind CSS ไปใช้งานในโปรเจกต์ได้ทันที</li>
+                        </ul>
+                    </div>
+                    <span class="card-badge text-xs text-emerald-400 font-medium mt-6 block"></span>
+                </div>
+
+                <!-- การ์ด Figma AI -->
+                <div class="ai-card p-8 rounded-2xl cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-4 mb-5">
+                            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSQwyQKSZ41JQOs8UySziC6oNfcCGDFuLWHO4OeWKqksege-p2YAjE7zWJ_htedtxPOdZA8ApeVCgHvXxQ" alt="Figma Logo" class="w-14 h-14 rounded-2xl object-cover border border-slate-700 shadow-md">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Figma AI & Relume</h4>
+                                <p class="text-sm text-amber-400 font-medium">Wireframe & Design Systems</p>
+                            </div>
+                        </div>
+                        <p class="text-sm md:text-base text-slate-300 leading-relaxed mb-4">
+                            ผู้ช่วยในงานออกแบบ UI/UX ช่วยร่างโครงสร้างหน้าเว็บ (Sitemap & Wireframe) สร้างไอเดียการจัดวางเลย์เอาต์ และช่วยเลือกชุดสีฟอนต์ที่เหมาะสมกับแบรนด์
+                        </p>
+                        <ul class="text-sm text-slate-300 space-y-2 list-disc pl-5">
+                            <li>สร้างโครงสร้างหน้าเว็บและเขียนข้อความจำลองอัตโนมัติ</li>
+                            <li>ช่วยปรับแต่งภาพ ลบพื้นหลัง และสร้างชิ้นงานกราฟิกประกอบเว็บ</li>
+                            <li>แปลงดีไซน์จาก Figma ให้เป็นโค้ด HTML/CSS ได้สะดวกรวดเร็ว</li>
+                        </ul>
+                    </div>
+                    <span class="card-badge text-xs text-amber-400 font-medium mt-6 block"></span>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 text-center py-6 text-sm text-slate-400">
+        สื่อการเรียนการสอน AI & Web Development | พัฒนาด้วย HTML, CSS & JS
+    </footer>
+
+</body>
+</html>
